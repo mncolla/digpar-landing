@@ -1,0 +1,7 @@
+---
+const { variant = "primary" } = Astro.props;
+---
+
+<button data-variant={variant} class="font-light text-sm w-[160px] h-[40px] rounded-md border-brand-blue bg-brand-blue border text-white data-[variant=secondary]:bg-white  data-[variant=secondary]:text-brand-blue">
+    <slot/>
+</button>
