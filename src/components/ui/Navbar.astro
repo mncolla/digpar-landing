@@ -1,0 +1,40 @@
+---
+import Button from "./Button.astro";
+---
+
+<nav
+  class="fixed top-0 left-0 w-screen h-fit py-2 lg:py-6  shadow-md"
+>
+  <div class="mx-auto flex justify-between items-center container">
+    <img src="/logo-icon.png" alt="" class="lg:hidden pl-[15px]"/>
+    <img src="/logo-landscape.png" alt="" class="hidden lg:block" />
+    <ul
+      id="menu-items"
+      class="fixed lg:relative left-0 top-0 z-10 flex-col text-center overflow-hidden w-0 lg:w-screen peer-checked:w-screen h-full bg-white lg:bg-transparent lg:gap-x-4 flex items-center justify-center transition-all duration-200 lg:flex-row lg:h-fit gap-y-8 lg:justify-end text-2xl lg:text-base"
+    >
+      <li><button>IT Staffing Augmentation</button></li>
+      <li><button>Desarrollos a Medida</button></li>
+      <li><button>Consultoría</button></li>
+      <li><Button>Contáctanos</Button></li>
+    </ul>
+
+    <button id="menu-button" class="z-20 hamburger hamburger--collapse lg:hidden" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+  </div>
+</nav>
+
+<script>
+  const button = document.getElementById("menu-button");
+  const items = document.getElementById("menu-items");
+  button.addEventListener("click", () => {
+    items.classList.toggle("w-screen");
+    button.classList.toggle("is-active");
+  });
+</script>
+
+<style>
+    
+</style>
