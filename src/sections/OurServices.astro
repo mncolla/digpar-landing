@@ -1,0 +1,18 @@
+---
+import SingleService from "../components/SingleService.astro";
+---
+
+<section class="flex flex-col items-center container mx-auto text-[#545454] py-8">
+    <h2 class="text-black font-semibold text-2xl text-center text-balance">Nuestros servicios principales en IT</h2>
+    
+    <SingleService
+        icon="/our-services/staff-augmentation.png"
+        title="IT Staffing Augmentation"
+        description="Brindar y extender equipos con la velocidad, capacidad e innovación que necesitan nuestros partners para escalar y construir eficazmente su software."
+        poster="/our-services/staff-augmentation-poster.png"
+        list={[
+            "Staffing: extensión de los equipos con nuestros profesionales de nivel para colaborar con el desarrollo de sus productos.",
+            "Outsourcing: tercerización del desarrollo de productos en equipos liderados por nuestros managers y líderes técnicos."
+        ]}
+    />
+</section>
